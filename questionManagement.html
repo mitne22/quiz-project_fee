@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Management</title>
+    <link rel="stylesheet" href="/assets/base.css" />
+    <link rel="stylesheet" href="/assets/userManagement.css" />
+    <link rel="stylesheet" href="/assets/questionManagement.css" />
+</head>
+
+<body class="user-container">
+    <div class="page-grid">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3 class="sidebar-title">Menu</h3>
+            <ul class="sidebar-list">
+                <li class="sidebar-item flex align-center">
+                    <img src="/assets/images/quiz_management.png" alt=""> Quiz Management
+                </li>
+                <li class="sidebar-item flex align-center">
+                    <img src="/assets/images/question-solid.svg.png" alt=""> Question Management
+                </li>
+                <li class="sidebar-item flex align-center">
+                    <img src="/assets/images/user.png" alt=""> User Management
+                </li>
+                <li class="sidebar-item flex align-center">
+                    <img src="/assets/images/role.png" alt=""> Role Management
+                </li>
+            </ul>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <nav class="navbar flex justify-between align-center">
+                <div class="flex align-center">
+                    <a href="#" class="nav-logo">
+                        <img src="/assets/images/logo.png" alt="Logo" class="nav-logo-image">
+                    </a>
+                    <h1>Quizzes</h1>
+                </div>
+
+                <ul class="nav-menu flex justify-between list-style-none">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Quizzes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Management</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="profile-menu">
+                    <div class="unauthenticated flex justify-between hidden">
+                        <a href="#" class="btn btn-login nav-link">Login</a>
+                        <a href="#" class="btn btn-register nav-link">Register</a>
+                    </div>
+                    <div class="authenticated">
+                        <img src="/assets/images/profile-avatar.png" alt="Avatar" class="avatar-image">
+                        <ul class="profile-dropdown">
+                            <li class="dropdown-item">Profile</li>
+                            <li class="dropdown-item">Settings</li>
+                            <li class="dropdown-item">Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <section class="main-content">
+            <!-- Panel: Question Management (Filters) -->
+            <div class="panel">
+                <div class="panel-header">Question Management</div>
+
+                <div class="filters">
+                    <div class="form-group">
+                        <label class="form-control-label" for="q-name">Name</label>
+                        <input class="form-control" id="q-name" placeholder="Enter role name to search" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label" for="q-type">Type</label>
+                        <select class="form-control selectlike" id="qtype">
+                            <option disabled selected>Type</option>
+                            <option value="multiple_choice">Multiple Choice</option>
+                            <option value="true_false">True / False</option>
+                            <option value="short_answer">Short Answer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="form-group is-vertical">
+                        <label class="form-control-label" for="">Status</label>
+                        <label class="checkbox-inline" for="q-active">
+                            <input type="checkbox" id="q-active" /> Active
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel-buttons flex justify-between align-center">
+                    <button class="btn btn-icon-search" type="button">
+                        <img src="/assets/images/plus-solid.png" alt=""> Create
+                    </button>
+                    <div>
+                        <button class="btn btn-icon-clear" type="button">
+                            <img src="/assets/images/path.png" alt="icon" /> Clear
+                        </button>
+                        <button class="btn btn-icon-search" type="button">
+                            <img src="/assets/images/magnifying-glass-solid.svg.png" alt="icon" /> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Question List -->
+            <div class="panel">
+                <div class="panel-header">Question List</div>
+
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Content</th>
+                                <th class="col-min">Type</th>
+                                <th class="col-min">Answers</th>
+                                <th class="col-min">Status</th>
+                                <th class="col-min">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Who is the inventor of the airplane?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Who is the inventor of the World Wide Web?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Where is Viet Nam?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>What is the capital of France?</td>
+                                <td>SingleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Who is the inventor of the alternating current?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Where is Australia?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Who is the inventor of the ATM?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Where is France?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Where is the United States?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Who is the inventor of the washing machine?</td>
+                                <td>MultipleChoice</td>
+                                <td>4</td>
+                                <td>cell</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Per page + Pagination -->
+                <div class="pagination-row flex justify-between align-center">
+                    <div class="flex align-center">
+                        <span>Items per page:</span>
+                        <select class="select-sm">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                    </div>
+
+                    <div class="pagination flex align-center">
+                        <button class="page-btn page-icon">«</button>
+                        <button class="page-btn page-icon">‹</button>
+                        <button class="page-btn is-active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn page-icon">›</button>
+                        <button class="page-btn page-icon">»</button>
+                    </div>
+
+                    <div class="page-total">
+                        <span class="page-total">1-10 of 32</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Add Question -->
+            <div class="panel">
+                <div class="panel-header">Add Question</div>
+
+                <div class="flex">
+                    <div class="form-group is-vertical">
+                        <label class="form-control-label" for="q-content">Content</label>
+                        <textarea class="form-control textarea" id="q-content"
+                            placeholder="Enter question content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="qtype-add">Question Type</label>
+                        <select class="form-control selectlike" id="qtype">
+                            <option disabled selected>Select Question Type</option>
+                            <option value="multiple_choice">Multiple Choice</option>
+                            <option value="true_false">True / False</option>
+                            <option value="short_answer">Short Answer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="form-group is-vertical">
+                        <label class="form-control-label" for="">Status</label>
+                        <label class="checkbox-inline" for="q-add-active">
+                            <input type="checkbox" id="q-add-active" /> Active
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel-buttons flex justify-between align-center">
+                    <button class="btn btn-icon-search" type="button">
+                        <img src="/assets/images/plus-solid.png" alt=""> Show Answers
+                    </button>
+                    <div>
+                        <button class="btn btn-icon-clear" type="button">
+                            <img src="/assets/images/path.png" alt="icon" /> Clear
+                        </button>
+                        <button class="btn btn-icon-search" type="button">
+                            <img src="/assets/images/floppy-disk-regular.png" alt="icon" /> Save
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Answer List -->
+                <div class="panel">
+                    <div class="panel-header">Answer List</div>
+
+                    <div class="table-wrap">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Content</th>
+                                    <th class="col-min">Is Correct</th>
+                                    <th class="col-min">Status</th>
+                                    <th class="col-min">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Wright brothers</td>
+                                    <td>True</td>
+                                    <td>Yes</td>
+                                    <td class="table-actions">
+                                        <button class="action edit" title="Edit"><img
+                                                src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                        <button class="action delete" title="Delete"><img
+                                                src="/assets/images/delete.png" alt="delete"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander Graham Bell</td>
+                                    <td>False</td>
+                                    <td>Yes</td>
+                                    <td class="table-actions">
+                                        <button class="action edit" title="Edit"><img
+                                                src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                        <button class="action delete" title="Delete"><img
+                                                src="/assets/images/delete.png" alt="delete"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Albert Einstein</td>
+                                    <td>False</td>
+                                    <td>Yes</td>
+                                    <td class="table-actions">
+                                        <button class="action edit" title="Edit"><img
+                                                src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                        <button class="action delete" title="Delete"><img
+                                                src="/assets/images/delete.png" alt="delete"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Charles Babbage</td>
+                                    <td>False</td>
+                                    <td>cell</td>
+                                    <td class="table-actions">
+                                        <button class="action edit" title="Edit"><img
+                                                src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                        <button class="action delete" title="Delete"><img
+                                                src="/assets/images/delete.png" alt="delete"></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="panel-buttons flex justify-between align-center">
+                        <div></div>
+                        <button class="btn btn-icon-search" type="button">
+                            <img src="/assets/images/plus-solid.png" alt=""> Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Add Answer -->
+                <div class="panel">
+                    <div class="panel-header">Add Answer</div>
+
+                    <div class="flex">
+                        <div class="form-group is-vertical">
+                            <label class="form-control-label" for="ans-desc">Description</label>
+                            <textarea class="form-control textarea" id="ans-desc"
+                                placeholder="Enter your email"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="form-group is-vertical">
+                            <label class="form-control-label" for="">Is Correct?</label>
+                            <label class="checkbox-inline" for="ans-correct">
+                                <input type="checkbox" id="ans-correct" /> Active
+                            </label>
+                        </div>
+                        <div class="form-group is-vertical">
+                            <label class="form-control-label" for="">Status</label>
+                            <label class="checkbox-inline" for="ans-active">
+                                <input type="checkbox" id="ans-active" /> Active
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="panel-actions">
+                        <button class="btn btn-icon-clear"><img src="/assets/images/path.png" alt="cancel">
+                            Cancel</button>
+                        <button class="btn btn-icon-search">Save</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

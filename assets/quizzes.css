@@ -1,0 +1,25 @@
+.input-group {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    min-width: 0;
+}
+
+.input-group button {
+    border: none;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(56, 182, 255, 1);
+}

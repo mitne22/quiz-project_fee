@@ -1,0 +1,19 @@
+.hero-cta a {
+    text-decoration: none;
+    background-color: rgba(56, 182, 255, 1);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+}
+
+.hero-illustration img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

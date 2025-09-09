@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+    <link rel="stylesheet" href="/assets/base.css" />
+    <link rel="stylesheet" href="/assets/userManagement.css" />
+</head>
+
+<body class="user-container">
+    <div class="page-grid">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3 class="sidebar-title">Menu</h3>
+            <ul class="sidebar-list">
+                <li class="sidebar-item flex align-center"><img src="/assets/images/quiz_management.png" alt="quiz">Quiz
+                    Management</li>
+                <li class="sidebar-item flex align-center"><img src="/assets/images/question-solid.svg.png"
+                        alt="quiz">Question Management</li>
+                <li class="sidebar-item flex align-center"><img src="/assets/images/user.png" alt="quiz">User Management
+                </li>
+                <li class="sidebar-item flex align-center"><img src="/assets/images/role.png" alt="quiz">Role Management
+                </li>
+            </ul>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <nav class="navbar flex justify-between align-center">
+                <div class="flex align-center">
+                    <a href="" class="nav-logo">
+                        <img src="/assets/images/logo.png" alt="Logo" class="nav-logo-image">
+                    </a>
+                    <h1>Quizzes</h1>
+                </div>
+                <ul class="nav-menu flex justify-between list-style-none">
+                    <li class="nav-item">
+                        <a href="/home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/home.html" class="nav-link">Quizzes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="profile-menu">
+                    <div class="unauthenticated flex justify-between hidden">
+                        <a href="" class="btn btn-login nav-link">Login</a>
+                        <a href="" class="btn btn-register nav-link">Register</a>
+                    </div>
+                    <div class="authenticated">
+                        <img src="/assets/images/profile-avatar.png" alt="Avatar" class="avatar-image">
+                        <ul class="profile-dropdown">
+                            <li class="dropdown-item">Profile</li>
+                            <li class="dropdown-item">Settings</li>
+                            <li class="dropdown-item">Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <section class="main-content">
+            <div class="panel">
+                <div class="panel-header">User Management</div>
+
+                <div class="filters">
+                    <div class="form-group">
+                        <label class="form-control-label" for="search-username">Name</label>
+                        <input class="form-control" id="search-username" placeholder="Enter username to search" />
+                    </div>
+
+                    <div class="form-group is-vertical">
+                        <label class="form-control-label" for="status">Status</label>
+                        <label class="checkbox-inline" for="status-active">
+                            <input type="checkbox" id="status-active" />
+                            Active
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel-buttons flex justify-between align-center">
+                    <button class="btn btn-icon-search" type="button">
+                        <img src="/assets/images/plus-solid.png" alt=""> Create
+                    </button>
+                    <div>
+                        <button class="btn btn-icon-clear"><img src="/assets/images/path.png" alt="icon" />
+                            Clear</button>
+                        <button class="btn btn-icon-search"><img src="/assets/images/magnifying-glass-solid.svg.png"
+                                alt="icon" />Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List panel -->
+            <div class="panel">
+                <div class="panel-header">User List</div>
+
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>User Name</th>
+                                <th>Phone Number</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Admin</td>
+                                <td>User</td>
+                                <td>admin@domain.com</td>
+                                <td>admin</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Editor</td>
+                                <td>User</td>
+                                <td>editor@domain.com</td>
+                                <td>editor</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cong</td>
+                                <td>Dinh</td>
+                                <td>congdinh@domain.com</td>
+                                <td>congdinh</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>Nguyen</td>
+                                <td>vannguyen@domain.com</td>
+                                <td>vannguyen</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="table-actions">
+                                    <button class="action edit" title="Edit"><img
+                                            src="/assets/images/pen-to-square-solid.svg.png" alt="edit"></button>
+                                    <button class="action delete" title="Delete"><img src="/assets/images/delete.png"
+                                            alt="delete"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination-row flex justify-between align-center">
+                    <div class="flex align-center">
+                        <span>Items per page:</span>
+                        <select class="select-sm">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                    </div>
+
+                    <div class="pagination flex align-center">
+                        <button class="page-btn">«</button>
+                        <button class="page-btn">‹</button>
+                        <button class="page-btn is-active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">›</button>
+                        <button class="page-btn">»</button>
+                    </div>
+                    <div class="page-total">
+                        <span class="page-total">1-10 of 32</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add panel -->
+            <div class="panel">
+                <div class="panel-header">Add User</div>
+
+                <div class="flex">
+                    <div class="form-group">
+                        <label class="form-control-label" for="fn">First Name</label>
+                        <input class="form-control" id="fn" placeholder="Enter your first name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="ln">Last Name</label>
+                        <input class="form-control" id="ln" placeholder="Enter your last name" />
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="form-group">
+                        <label class="form-control-label" for="email">Email</label>
+                        <input class="form-control" id="email" placeholder="Enter your email" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="uname">User Name</label>
+                        <input class="form-control" id="uname" placeholder="Enter your user name" />
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="form-group">
+                        <label class="form-control-label" for="pw">Password</label>
+                        <input type="password" class="form-control" id="pw" placeholder="Enter your password" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="cpw">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpw" placeholder="Confirm your password" />
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="form-group">
+                        <label class="form-control-label" for="dob">Date of Birth</label>
+                        <input class="form-control" id="dob" placeholder="Enter your date of birth" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="phone">Phone Number</label>
+                        <input class="form-control" placeholder="Enter your phone number" />
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="form-group is-vertical">
+                        <label class="form-control-label" for="status">Status</label>
+                        <label class="checkbox-inline" for="status-active">
+                            <input type="checkbox" id="status-active" />
+                            Active
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel-actions">
+                    <button class="btn btn-icon-clear"><img src="/assets/images/path.png" alt="cancel"> Cancel</button>
+                    <button class="btn btn-icon-search">Save</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-title flex align-center">
+                        <img src="/assets/images/logo.png" alt="Logo" class="footer-logo">
+                        <h2>Quizzes</h2>
+                    </div>
+                    <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                    <h2 class="footer-title">Menu</h2>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer-title">Contact</h2>
+                    <ul class="contact-list">
+                        <li><img src="/assets/images/mail_icon.png" alt="mail-icon">congdinh2021@gmail.com</li>
+                        <li><img src="/assets/images/phone-solid.png" alt="phone-icon">+84 944 551 536</li>
+                        <li><img src="/assets/images/location-dot-solid.png" alt="location-icon">123 Xuan Dinh, Bac Tu
+                            Liem, Ha Noi, Viet Nam</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p class="copyright align-center text-center">© May 2024 — React JS 19</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

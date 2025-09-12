@@ -1,0 +1,40 @@
+:root {
+    --bs-primary: #38b6ff;
+    /* màu thương hiệu cho btn-primary, link-primary */
+}
+
+/* Header */
+.brand-logo {
+    width: 28px;
+    height: 28px;
+}
+
+/* Hero */
+.py-lg-6 {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+}
+
+.hero-img {
+    max-width: 520px;
+}
+
+/* Title "QUIZZES" có tracking nhẹ như mẫu */
+.tracking-wide {
+    letter-spacing: .08rem;
+}
+
+/* Cards */
+.card.rounded-3 {
+    border-radius: .9rem;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+/* Footer */
+.footer-logo {
+    width: 40px;
+    height: 40px;
+}

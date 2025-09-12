@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page (Tailwind)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-full text-[#222] [--card-img-h:50vh]">
+    <!-- ======= HEADER ======= -->
+    <header class="border-b border-gray-300">
+        <nav class="flex items-center justify-between py-3 px-[150px]">
+            <div class="flex items-center gap-3">
+                <a href="#" class="inline-flex items-center">
+                    <img src="/assets/images/logo.png" alt="Logo" class="w-15 h-14" />
+                </a>
+                <h1 class="text-xl font-semibold">Quizzes</h1>
+            </div>
+
+            <ul class="flex gap-6 m-0 p-0">
+                <li class="list-none">
+                    <a href="/home.html" class="block px-3 py-2 rounded hover:bg-gray-300 hover:text-white">Home</a>
+                </li>
+                <li class="list-none">
+                    <a href="/home.html" class="block px-3 py-2 rounded hover:bg-gray-300 hover:text-white">Quizzes</a>
+                </li>
+                <li class="list-none">
+                    <a href="/about.html" class="block px-3 py-2 rounded hover:bg-gray-300 hover:text-white">About</a>
+                </li>
+                <li class="list-none">
+                    <a href="/contact.html"
+                        class="block px-3 py-2 rounded hover:bg-gray-300 hover:text-white">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Profile / Auth -->
+            <div class="relative">
+                <!-- Unauthenticated (toggle hidden as needed) -->
+                <div class="hidden gap-3">
+                    <a href="#" class="px-4 py-2 rounded hover:bg-gray-100">Login</a>
+                    <a href="#" class="px-4 py-2 rounded hover:bg-sky-600">Register</a>
+                </div>
+
+                <!-- Authenticated dropdown -->
+                <div class="group inline-flex items-center">
+                    <img src="/assets/images/profile-avatar.png" alt="Avatar" class="w-12 h-12 rounded-full"
+                        id="avatarBtn" />
+                    <ul class="absolute right-0 top-full mt-2 w-44 bg-white border border-gray-300 rounded-md shadow hidden group-hover:block"
+                        id="menu">
+                        <li>
+                            <a class="block px-3 py-2 rounded-t-md hover:bg-gray-200" href="#">Profile</a>
+                        </li>
+                        <li>
+                            <a class="block px-3 py-2 hover:bg-gray-200" href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a class="block px-3 py-2 rounded-b-md hover:bg-gray-200" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======= HERO ======= -->
+    <section class="py-12 px-[150px]">
+        <div class="grid md:grid-cols-5 gap-6 items-center">
+            <div class="md:col-span-3 space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="/assets/images/logo.png" alt="Logo" class="w-10 h-10" />
+                    <h1 class="text-3xl md:text-4xl font-bold">Quizzes</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, nunc non laoreet mattis,
+                    nunc
+                    sapien ultrices sapien, nec tincidunt nunc nunc nec libero.
+                </p>
+
+                <div>
+                    <h2 class="text-lg font-semibold">Contact</h2>
+                    <ul class="mt-2 space-y-2 text-sky-500">
+                        <li class="flex items-center gap-2">
+                            <img src="/assets/images/mail_icon.png" alt="mail-icon" class="w-[18px] h-[18px]" />
+                            <a href="mailto:congdinh2021@gmail.com" class="hover:underline">congdinh2021@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <img src="/assets/images/phone-solid.png" alt="phone-icon" class="w-[18px] h-[18px]" />
+                            <a href="tel:+84944551536" class="hover:underline">+84 944 551 536</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <img src="/assets/images/location-dot-solid.png" alt="location-icon"
+                                class="w-[18px] h-[18px]" />
+                            <span>123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <img src="/assets/images/quiz.png" alt="Quiz illustration" class="w-full h-auto block" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= TEAM / CARDS ======= -->
+    <section id="quizzes" class="pb-6 px-[150px]">
+        <h1 class="text-center text-2xl font-semibold">QUIZZES</h1>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border-b border-gray-300 pb-6">
+            <!-- Card 1 -->
+            <article class="text-center bg-white border border-gray-300 rounded-lg overflow-hidden flex flex-col">
+                <img src="/assets/images/John.png" alt="" class="w-full h-[var(--card-img-h)] object-cover block" />
+                <div class="p-3">
+                    <div>
+                        <h3 class="m-0 font-semibold">John Doe</h3>
+                    </div>
+                    <div class="mt-5">Front End Developer</div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="text-center bg-white border border-gray-300 rounded-lg overflow-hidden flex flex-col">
+                <img src="/assets/images/Jane.png" alt="" class="w-full h-[var(--card-img-h)] object-cover block" />
+                <div class="p-3">
+                    <div>
+                        <h3 class="m-0 font-semibold">Jane Doe</h3>
+                    </div>
+                    <div class="mt-5">Back End Developer</div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="text-center bg-white border border-gray-300 rounded-lg overflow-hidden flex flex-col">
+                <img src="/assets/images/Smith.png" alt="" class="w-full h-[var(--card-img-h)] object-cover block" />
+                <div class="p-3">
+                    <div>
+                        <h3 class="m-0 font-semibold">John Smith</h3>
+                    </div>
+                    <div class="mt-5">Full Stack Developer</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start border-b border-gray-300 px-[150px] pb-6">
+            <!-- Brand (2fr) -->
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-3">
+                    <img src="/assets/images/logo.png" alt="Logo" class="w-[50px] h-[50px]" />
+                    <h2 class="text-xl font-semibold">Quizzes</h2>
+                </div>
+                <p class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </div>
+
+            <!-- Menu -->
+            <div>
+                <h2 class="text-lg font-semibold">Menu</h2>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="#" class="text-sky-500 hover:underline">Home</a></li>
+                    <li><a href="#" class="text-sky-500 hover:underline">Quizzes</a></li>
+                    <li><a href="#" class="text-sky-500 hover:underline">About</a></li>
+                    <li><a href="#" class="text-sky-500 hover:underline">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h2 class="text-lg font-semibold">Contact</h2>
+                <ul class="mt-2 space-y-2 text-sky-500">
+                    <li class="flex items-center gap-2">
+                        <img src="/assets/images/mail_icon.png" alt="mail-icon" class="w-[18px] h-[18px]" />
+                        <a href="mailto:congdinh2021@gmail.com" class="hover:underline">congdinh2021@gmail.com</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <img src="/assets/images/phone-solid.png" alt="phone-icon" class="w-[18px] h-[18px]" />
+                        <a href="tel:+84944551536" class="hover:underline">+84 944 551 536</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <img src="/assets/images/location-dot-solid.png" alt="location-icon"
+                            class="w-[18px] h-[18px]" />
+                        <span>123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="px-[150px]">
+            <p class="text-center py-4">© May 2024 — React JS 19</p>
+        </div>
+    </footer>
+
+    <script>
+        const IS_AUTHED = false;
+        const guest = document.getElementById('guest');
+        const authed = document.getElementById('authed');
+        if (IS_AUTHED) {
+            guest?.classList.add('hidden');
+            authed?.classList.remove('hidden');
+        } else {
+            guest?.classList.remove('hidden');
+            authed?.classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>

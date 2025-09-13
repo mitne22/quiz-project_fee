@@ -185,19 +185,16 @@
         </div>
     </footer>
 
-    <!-- Optional tiny script to switch auth view (demo only) -->
     <script>
-        // Toggle this to preview guest vs authed blocks in static HTML
-        const IS_AUTHED = false;
-        const guest = document.getElementById('guest');
-        const authed = document.getElementById('authed');
-        if (IS_AUTHED) {
-            guest?.classList.add('hidden');
-            authed?.classList.remove('hidden');
-        } else {
-            guest?.classList.remove('hidden');
-            authed?.classList.add('hidden');
-        }
+        const btn = document.getElementById('avatarBtn');
+        const menu = document.getElementById('menu');
+        document.addEventListener('click', (e) => {
+            if (btn.contains(e.target)) {
+                menu.classList.toggle('hidden');   
+            } else if (!menu.contains(e.target)) {
+                menu.classList.add('hidden');        
+            }
+        });
     </script>
 </body>
 

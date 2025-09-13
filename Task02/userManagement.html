@@ -19,8 +19,7 @@
         <header class="[grid-area:header] border-b border-gray-300 px-[150px]">
             <nav class="flex items-center justify-between py-3">
                 <div class="flex items-center gap-3">
-                    <a href="#" class="inline-flex items-center">
-                        <!-- w-15 không có trong Tailwind -> dùng arbitrary -->
+                <a href="#" class="inline-flex items-center">            
                         <img src="/assets/images/logo.png" alt="Logo" class="w-[60px] h-14 object-contain" />
                     </a>
                     <h1 class="text-xl font-semibold">Quizzes</h1>
@@ -39,7 +38,7 @@
 
                 <div class="relative">
                     <div class="group inline-flex items-center">
-                        <img src="/assets/images/profile-avatar.png" alt="Avatar" class="w-12 h-12 rounded-full" />
+                        <img src="/assets/images/profile-avatar.png" alt="Avatar" class="w-15 h-15 rounded-full" />
                         <ul
                             class="absolute right-0 top-full mt-2 w-44 bg-white border border-gray-300 rounded-md shadow hidden group-hover:block">
                             <li><a class="block px-3 py-2 rounded-t-md hover:bg-gray-200" href="#">Profile</a></li>
@@ -83,7 +82,7 @@
                     <div class="space-y-1 flex flex-col">
                         <label for="search-username" class="font-semibold">Name</label>
                         <input id="search-username" placeholder="Enter username to search"
-                            class="w-[320px] h-9 px-3 border border-gray-300 rounded-lg outline-none bg-white w-full" />
+                            class="h-9 px-3 border border-gray-300 rounded-lg outline-none bg-white w-full" />
                     </div>
                     <div class="flex flex-col gap-2">
                         <label class="font-semibold" for="status">Status</label>
@@ -318,9 +317,9 @@
         </section>
 
         <!-- Footer (nằm cột phải hàng cuối) -->
-        <footer class="[grid-area:footer] border-t border-gray-300 bg-white">
+        <footer class="[grid-area:footer] border-t border-gray-300 bg-white px-[150px]">
             <div
-                class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start py-6 ml-[100px] mr-[100px] border-b border-gray-300">
+                class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start py-6">
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-3">
                         <img src="/assets/images/logo.png" alt="Logo" class="w-[50px] h-[50px]" />
@@ -353,7 +352,7 @@
                     </ul>
                 </div>
             </div>
-            <p class="text-center py-3">© May 2024 — React JS 19</p>
+            <p class="text-center py-3 border-t border-gray-300">© May 2024 — React JS 19</p>
         </footer>
     </div>
 </body>
